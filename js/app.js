@@ -57,6 +57,7 @@ function addNote(noteId) {
     }
 }
 function edit(elem, noteId) {
+    var beforeEdit = elem.innerHTML;
     elem.setAttribute("contenteditable", "true");
     elem.setAttribute("tabindex", "-1");
     elem.setAttribute("title", "clicking outside will save note automatically");
@@ -66,9 +67,11 @@ function edit(elem, noteId) {
         var updatedNote = elem.innerHTML;
         elem.setAttribute("contenteditable", "false");
         elem.setAttribute("title", "Double click to edit");
-        ls.updateItemValue(updatedNote, noteId);
-        view.render(ls.getAllItems());
-        showMsg("Notes updated successfully");
+        if (beforeEdit != updatedNote) {
+            ls.updateItemValue(updatedNote, noteId);
+            view.render(ls.getAllItems());
+            showMsg("Notes updated successfully");
+        }
     });
 }
 var view = {
