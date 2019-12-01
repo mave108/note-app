@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Note App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container heading">
+            <h1>Notes Aap!</h1>
+        </div>
+    </header>
+    <main>
+        <div id="chip" class="hide">Notes updated successfully</div>
+        <section>
+            <div class="container">
+                <div id="success-msg"></div>
+                <div class="main-form">
+                    <div>
+                        <form name="create-note-form" id="create-note-form">
+                            <input type="text" name="note_text" placeholder="type to make note" required />
+                            <button>Submit</button>
+                        </form>
+                    </div>
+                    <div>
+                        <input type="text" name="search" placeholder="type to search" required id="search" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+
+                <ul id="user-notes">
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="js/localStorage.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
