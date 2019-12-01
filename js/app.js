@@ -63,7 +63,7 @@ function edit(elem, noteId) {
     elem.setAttribute("title", "clicking outside will save note automatically");
     elem.focus();
 
-    this.addEventListener('focusout', function () {
+    elem.addEventListener('focusout', function () {
         var updatedNote = elem.innerHTML;
         elem.setAttribute("contenteditable", "false");
         elem.setAttribute("title", "Double click to edit");
