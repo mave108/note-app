@@ -109,7 +109,7 @@ ul#user-notes li>div{
     border-radius: 8px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
-    padding: 2rem 1.5rem;
+    padding: 2rem 3.5rem;
     top: 30%;
     left: 35%;
     font-size: 1.6rem;
@@ -139,10 +139,10 @@ ul#user-notes li p.note{
     
 }
 .action button:nth-child(1){
-    background: url(/img/delete.svg) no-repeat center center;
+    background: url(img/delete.svg) no-repeat center center;
 }
 .action button:nth-child(2){
-    background: url(/img/add.svg) no-repeat center center;
+    background: url(img/add.svg) no-repeat center center;
 }
 input#search{
     margin-top: 1rem;
