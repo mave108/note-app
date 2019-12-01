@@ -59,11 +59,13 @@ function addNote(noteId) {
 function edit(elem, noteId) {
     elem.setAttribute("contenteditable", "true");
     elem.setAttribute("tabindex", "-1");
+    elem.setAttribute("title", "clicking outside will save note automatically");
     elem.focus();
 
     this.addEventListener('focusout', function () {
         var updatedNote = elem.innerHTML;
         elem.setAttribute("contenteditable", "false");
+        elem.setAttribute("title", "Double click to edit");
         ls.updateItemValue(updatedNote, noteId);
         view.render(ls.getAllItems());
         showMsg("Notes updated successfully");
